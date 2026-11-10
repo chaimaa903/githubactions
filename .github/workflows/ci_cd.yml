@@ -14,7 +14,7 @@ jobs:
 
   # JOB 1 : Tests Python
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       # Récupérer le code GitHub
@@ -42,7 +42,7 @@ jobs:
   # JOB 2 : Construction Docker
   build:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       # Récupérer le code
